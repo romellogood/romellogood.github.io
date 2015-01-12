@@ -1,0 +1,82 @@
+/*Variables*/
+
+/*Styles*/
+* { margin: auto; }
+body {
+	font: normal 1.5em Helvetica, Arial, sans-serif;
+  background-color: white;
+	margin: auto 10px;
+	padding-bottom:70px;
+}
+header {
+	text-align: center;
+}
+section {
+	width: 90%;
+}
+#map {
+	width: 100%;
+}
+#map-holder {
+	height: 550px;
+}
+#info {
+	#return-map {
+		display: block;
+		margin-bottom: 5px;
+	}
+	.artist {
+		font-weight: bold;
+		font-size: 2em;
+		color: darkgrey;
+		margin: 0px;
+	}
+	.state-name {
+		font-weight: bold;
+		font-size: 1.4em;
+		color: darkgrey;
+		border-bottom: 1px solid darkgrey;
+	}
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid darkgrey;
+	padding-top: 10px;
+	width: 75%;
+	margin: 5px auto;
+}
+footer {
+	background-color: #F8F8F8;
+	margin-top: 10px;
+	padding: 20px 30px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	p {
+		display: inline;
+	}
+	div { display: inline; }
+	.twitter {
+		margin: 0px 20px;
+	}
+	.top {
+		float: right;
+		margin-right: 15px;
+		cursor: pointer;
+		font-size: 1.25em;
+	}
+}
+// .slick-slider { margin-bottom: 60px; }
+a:link, a:visited, a:hover, a:active { text-decoration: none; color: black; }
+
+// /*Medua Queries*/
+@media only screen and (max-width: 550px) {
+	.twitter {
+		display: none;
+		text-align: center;
+	}
+}
