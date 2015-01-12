@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@font-face {
+font-family: 'BebasNue';
+src: url(BebasNeue.otf);
+}
+
+* {
+	font-family: 'BebasNue', arial, georgia;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+body { background-color: white; }
+
+.centered {	text-align: center; }
+
+header p { 
+	float: right;
+	text-align: right;
+ }
+
+#logo {
+	background: transparent url('../images/logo-black.png') center center no-repeat;
+	width: 150px;
+	height: 150px;
+}
+
+#schemes {
+	height: 400px;
+	width: 500px;
+	margin: 100px auto auto auto;
+}
+
+#schemes p {
+	font-size: 40px;
+	margin: auto;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+	border-bottom:solid 2px;
+}
+a:active {
+	text-decoration: none;
+}
