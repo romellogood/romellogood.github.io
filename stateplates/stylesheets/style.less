@@ -4,7 +4,7 @@
 * { margin: auto; }
 body {
 	font: normal 1.5em Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: #F8F8F8;
 	margin: auto 10px;
 	padding-bottom:70px;
 }
@@ -12,15 +12,10 @@ header {
 	text-align: center;
 }
 section {
-	width: 90%;
+	width: 95%;
+	max-width: 1200px;
 }
-#map {
-	width: 100%;
-}
-#map-holder {
-	height: 550px;
-}
-#info {
+#single {
 	#return-map {
 		display: block;
 		margin-bottom: 5px;
@@ -28,15 +23,23 @@ section {
 	.artist {
 		font-weight: bold;
 		font-size: 2em;
-		color: darkgrey;
 		margin: 0px;
+		display: inline;
+	}
+	.dribbble {
+		display: inline;
+		margin-top: -10px;
+		padding-left: 10px;
 	}
 	.state-name {
 		font-weight: bold;
 		font-size: 1.4em;
-		color: darkgrey;
 		border-bottom: 1px solid darkgrey;
 	}
+}
+#button-holder {
+	max-width: 500px;
+	width: 800%;
 }
 hr {
 	display: block;
@@ -48,7 +51,7 @@ hr {
 	margin: 5px auto;
 }
 footer {
-	background-color: #F8F8F8;
+	background-color: white;
 	margin-top: 10px;
 	padding: 20px 30px;
 	position: fixed;
@@ -70,13 +73,20 @@ footer {
 		font-size: 1.25em;
 	}
 }
-// .slick-slider { margin-bottom: 60px; }
 a:link, a:visited, a:hover, a:active { text-decoration: none; color: black; }
 
-// /*Medua Queries*/
+/*Medua Queries*/
 @media only screen and (max-width: 550px) {
 	.twitter {
 		display: none;
 		text-align: center;
 	}
 }
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: @screen-sm-min) {}
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: @screen-md-min) {}
+/* Large devices (large desktops, 1200px and up) */
+// @media (min-width: @screen-lg-min) {}

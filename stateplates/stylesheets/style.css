@@ -5,7 +5,7 @@
 }
 body {
   font: normal 1.5em Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: #F8F8F8;
   margin: auto 10px;
   padding-bottom: 70px;
 }
@@ -13,29 +13,32 @@ header {
   text-align: center;
 }
 section {
-  width: 90%;
+  width: 95%;
+  max-width: 1200px;
 }
-#map {
-  width: 100%;
-}
-#map-holder {
-  height: 550px;
-}
-#info #return-map {
+#single #return-map {
   display: block;
   margin-bottom: 5px;
 }
-#info .artist {
+#single .artist {
   font-weight: bold;
   font-size: 2em;
-  color: darkgrey;
   margin: 0px;
+  display: inline;
 }
-#info .state-name {
+#single .dribbble {
+  display: inline;
+  margin-top: -10px;
+  padding-left: 10px;
+}
+#single .state-name {
   font-weight: bold;
   font-size: 1.4em;
-  color: darkgrey;
   border-bottom: 1px solid darkgrey;
+}
+#button-holder {
+  max-width: 500px;
+  width: 800%;
 }
 hr {
   display: block;
@@ -47,7 +50,7 @@ hr {
   margin: 5px auto;
 }
 footer {
-  background-color: #F8F8F8;
+  background-color: white;
   margin-top: 10px;
   padding: 20px 30px;
   position: fixed;
@@ -78,6 +81,7 @@ a:active {
   text-decoration: none;
   color: black;
 }
+/*Medua Queries*/
 @media only screen and (max-width: 550px) {
   .twitter {
     display: none;
