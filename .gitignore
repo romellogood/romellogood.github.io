@@ -1,0 +1,15 @@
+bower_components
+node_modules
+Gruntfile.js
+
+# style sheets
+stylesheets/*
+!stylesheets/portfolio.css
+
+# javascript files
+js/*
+!js/production.min.js
+
+# images
+img/*
+!img/build
