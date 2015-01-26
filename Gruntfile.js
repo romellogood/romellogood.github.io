@@ -15,10 +15,10 @@ module.exports = function(grunt) {
     cssmin: {
       target: {
         files: {
-          'styles.css': 'styles.css',
+          'stylesheets/styles.css': 'stylesheets/styles.css',
         }
       }
-    }
+    },
     imagemin: {
       dynamic: {
         files: [{
@@ -48,5 +48,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['concat', 'cssmin', 'imagemin', 'less', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'less', 'cssmin']);
 };
