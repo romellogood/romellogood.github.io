@@ -12,6 +12,13 @@ module.exports = function(grunt) {
         dest: 'js/production.js',
       }
     },
+    cssmin: {
+      target: {
+        files: {
+          'styles.css': 'styles.css',
+        }
+      }
+    }
     imagemin: {
       dynamic: {
         files: [{
@@ -25,7 +32,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "stylesheets/styles.css": "stylesheets/styles.less"
+          "stylesheets/styles.css": "stylesheets/styles.less",
         }
       }
     },
@@ -37,8 +44,9 @@ module.exports = function(grunt) {
     }
   });
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['concat', 'imagemin', 'less', 'uglify']);
+  grunt.registerTask('default', ['concat', 'cssmin', 'imagemin', 'less', 'uglify']);
 };

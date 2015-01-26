@@ -4,7 +4,7 @@ npm-debug.log
 
 #style sheets
 stylesheets/*
-!stylesheets/portfolio.css
+!stylesheets/styles.css
 
 #javascript files
 js/*
