@@ -11,5 +11,3 @@ js/*
 !js/production.min.js
 
 #images
-img/*
-!img/build
