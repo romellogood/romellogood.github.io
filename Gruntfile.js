@@ -48,5 +48,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'less', 'cssmin']);
+  grunt.registerTask(
+    'default',
+    ['concat', 'uglify', /*'imagemin',*/ 'less', 'cssmin']
+  );
 };
