@@ -4,13 +4,20 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'bower_components/jquery/dist/jquery.min.js',
-          'bower_components/jquery-color/jquery.color.js',
-          'bower_components/pleasejs/dist/Please.js',
+          'js/jquery.min.js',
+          'js/bootstrap.min.js',
+          'js/jquery.color.js',
+          'js/Please.js',
           'js/main.js',
         ],
         dest: 'js/production.js',
       }
+    },
+    concat_css: {
+      all: {
+        src: ['stylesheets/bootstrap.min.css','stylesheets/styles.css'],
+        dest: 'stylesheets/styles.css',
+      },
     },
     cssmin: {
       target: {
@@ -43,13 +50,11 @@ module.exports = function(grunt) {
       }
     }
   });
+  grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask(
-    'default',
-    ['concat', 'uglify', /*'imagemin',*/ 'less', 'cssmin']
-  );
+  grunt.registerTask('default', ['concat', 'uglify', 'less', 'concat_css', 'cssmin']);
 };
