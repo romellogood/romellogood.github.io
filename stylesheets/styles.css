@@ -4,7 +4,7 @@ body {
 }
 
 p {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
   margin: 12px 0px;
   transition: color 1s ease;
@@ -26,6 +26,7 @@ p {
 
 #contact a {
   margin: 0px 5px;
+  font-size: 28px;
   font-weight: 600;
   color: white;
   text-decoration: none;
