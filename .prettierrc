@@ -1,4 +1,5 @@
 {
+  "bracketSpacing": false,
   "singleQuote": true,
   "overrides": [{
     "files": ".prettierrc",

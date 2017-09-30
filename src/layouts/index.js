@@ -71,16 +71,16 @@ const Div = styled.div`
   .color {
     transition: color 0.5s ease;
 
-    ${props => props.color && `color: ${props.color};`}
+    ${props => props.color && `color: ${props.color};`};
   }
 `;
 
 class LayoutWrapper extends Component {
   static propTypes = {
     children: PropTypes.func
-  }
+  };
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -90,7 +90,7 @@ class LayoutWrapper extends Component {
     this.getColor = this.getColor.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     setInterval(this.getColor, 1000);
   }
 
@@ -98,11 +98,11 @@ class LayoutWrapper extends Component {
    * Taken from
    * stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
    */
-  getColor () {
+  getColor() {
     const date = new Date();
     const h = 360 * (date.getMinutes() / 59);
     const s = date.getSeconds() / 59;
-    const v = .75;
+    const v = 0.75;
     let r, g, b, i, f, p, q, t;
 
     i = Math.floor(h * 6);
@@ -111,42 +111,58 @@ class LayoutWrapper extends Component {
     q = v * (1 - f * s);
     t = v * (1 - (1 - f) * s);
     switch (i % 6) {
-      case 0: r = v, g = t, b = p; break;
-      case 1: r = q, g = v, b = p; break;
-      case 2: r = p, g = v, b = t; break;
-      case 3: r = p, g = q, b = v; break;
-      case 4: r = t, g = p, b = v; break;
-      case 5: r = v, g = p, b = q; break;
+      case 0:
+        (r = v), (g = t), (b = p);
+        break;
+      case 1:
+        (r = q), (g = v), (b = p);
+        break;
+      case 2:
+        (r = p), (g = v), (b = t);
+        break;
+      case 3:
+        (r = p), (g = q), (b = v);
+        break;
+      case 4:
+        (r = t), (g = p), (b = v);
+        break;
+      case 5:
+        (r = v), (g = p), (b = q);
+        break;
     }
 
     const red = Math.round(r * 255);
-    const green =  Math.round(g * 255);
+    const green = Math.round(g * 255);
     const blue = Math.round(b * 255);
 
     this.setState({color: `rgb(${red},${green},${blue})`});
   }
 
-  render () {
+  render() {
     const {children} = this.props;
     const {color} = this.state;
 
     return (
       <div>
         <Helmet>
-          <link rel='icon' href={favicon}/>
-          <meta charset='utf-8'/>
-          <meta name='description' content='The Personal Website of Romello Goodman.'/>
-          <meta name='keywords' content='Romello Goodman'/>
-          <meta name='version' content={version}/>
-          <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+          <link rel="icon" href={favicon} />
+          <meta charset="utf-8" />
+          <meta
+            name="description"
+            content="The Personal Website of Romello Goodman."
+          />
+          <meta name="keywords" content="Romello Goodman" />
+          <meta name="version" content={version} />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <title>Romello Goodman</title>
         </Helmet>
-        <Div color={color}>
-          {children()}
-        </Div>
+        <Div color={color}>{children()}</Div>
       </div>
     );
   }
 }
 
-export default LayoutWrapper
+export default LayoutWrapper;
