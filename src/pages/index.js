@@ -7,14 +7,7 @@ const IndexPage = () => (
       my name is <span className="color">Romello Goodman</span>.
     </h3>
     <a
-      href={__PATH_PREFIX__ + '/resume.pdf'}
-      target="_blank"
-      title="View/Download my resume."
-    >
-      <h3>resume</h3>
-    </a>
-    <a
-      href="https://github.com/romellogood"
+      href="https://github.com/romellogoodman"
       target="_blank"
       title="Go to github."
     >
