@@ -1,0 +1,11 @@
+# dependency directory
+node_modules
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# OS-specific temporary files
+.idea
+.DS_Store
