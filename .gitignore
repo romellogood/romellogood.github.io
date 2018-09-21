@@ -10,6 +10,6 @@ npm-debug.log*
 .idea
 .DS_Store
 
-# Gastby files
+# Parcel files
 .cache
-public
+dist

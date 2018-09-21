@@ -1,25 +1,23 @@
 {
   "name": "romellogood.github.io",
-  "description": "portfolio website",
-  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "build": "gatsby build && cpy public docs",
-    "dev": "gatsby develop",
+    "build": "parcel build index.html --out-dir docs && cpy CNAME docs",
+    "dev": "parcel index.html --port 3000",
     "format": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
-    "gatsby": "^2.0.6",
-    "gatsby-link": "^2.0.1",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
-    "gatsby-plugin-styled-components": "^3.0.0",
     "styled-components": "^3.4.9"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
-    "babel-plugin-styled-components": "^1.7.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "cpy-cli": "^2.0.0",
     "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.1.0",
@@ -27,6 +25,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.3"
   }
 }

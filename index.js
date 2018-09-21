@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-import Helmet from 'react-helmet';
-import styled, {injectGlobal} from 'styled-components';
-
-import favicon from './favicon.png';
-import {version} from '../../package.json';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Helmet from "react-helmet";
+import styled, { injectGlobal } from "styled-components";
 
 injectGlobal`
   body {
@@ -75,16 +73,12 @@ const Div = styled.div`
   }
 `;
 
-class LayoutWrapper extends Component {
-  static propTypes = {
-    children: PropTypes.array
-  };
-
+class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      color: '#000000'
+      color: "#000000"
     };
 
     this.getColor = this.getColor.bind(this);
@@ -149,34 +143,30 @@ class LayoutWrapper extends Component {
     const green = Math.round(g * 255);
     const blue = Math.round(b * 255);
 
-    this.setState({color: `rgb(${red},${green},${blue})`});
+    this.setState({ color: `rgb(${red},${green},${blue})` });
   }
 
   render() {
-    const {children} = this.props;
-    const {color} = this.state;
+    const { children } = this.props;
+    const { color } = this.state;
 
     return (
-      <div>
-        <Helmet>
-          <link rel="icon" href={favicon} />
-          <meta charset="utf-8" />
-          <meta
-            name="description"
-            content="The Personal Website of Romello Goodman."
-          />
-          <meta name="keywords" content="Romello Goodman" />
-          <meta name="version" content={version} />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>Romello Goodman</title>
-        </Helmet>
-        <Div color={color}>{children}</Div>
-      </div>
+      <Div color={color}>
+        <h1 className="color">hi people!</h1>
+        <h3>
+          my name is <span className="color">Romello Goodman</span>.
+        </h3>
+        <a
+          href="https://github.com/romellogoodman"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Go to github."
+        >
+          <h3>github</h3>
+        </a>
+      </Div>
     );
   }
 }
 
-export default LayoutWrapper;
+ReactDOM.render(<App />, document.getElementById("app"));
