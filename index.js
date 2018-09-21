@@ -1,75 +1,14 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import Helmet from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import {createGlobalStyle} from 'styled-components';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,sans-serif;
-    font-weight: 400;
-    line-height: 1.25;
-    word-wrap: break-word;
-    font-kerning: normal;
-  }
+    .color {
+      transition: color 0.5s ease;
 
-  * {
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3, h4, h5, h6, p {
-    margin: 0 0 1.0875rem 0;
-    padding: 0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2.9rem;
-    line-height: 1.1;
-    color: hsla(0, 0%, 0%, 0.9);
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-  }
-
-  h1 {
-    margin: .67em 0;
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.51572rem;
-  }
-
-  h3 {
-    font-size: 1.31951rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  h5 {
-    font-size: 0.87055rem;
-  }
-
-  h6 {
-    font-size: 0.81225rem;
-  }
-
-  a {
-    text-decoration: none;
-  }
-`;
-
-const Div = styled.div`
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1.45rem 1.0875rem;
-
-  .color {
-    transition: color 0.5s ease;
-
-    ${props => props.color && `color: ${props.color};`};
+      ${p => p.color && `color: ${p.color};`};
+    }
   }
 `;
 
@@ -78,7 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      color: "#000000"
+      color: '#000000'
     };
 
     this.getColor = this.getColor.bind(this);
@@ -143,30 +82,12 @@ class App extends Component {
     const green = Math.round(g * 255);
     const blue = Math.round(b * 255);
 
-    this.setState({ color: `rgb(${red},${green},${blue})` });
+    this.setState({color: `rgb(${red},${green},${blue})`});
   }
 
   render() {
-    const { children } = this.props;
-    const { color } = this.state;
-
-    return (
-      <Div color={color}>
-        <h1 className="color">hi people!</h1>
-        <h3>
-          my name is <span className="color">Romello Goodman</span>.
-        </h3>
-        <a
-          href="https://github.com/romellogoodman"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Go to github."
-        >
-          <h3>github</h3>
-        </a>
-      </Div>
-    );
+    return <GlobalStyle color={this.state.color} />;
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
