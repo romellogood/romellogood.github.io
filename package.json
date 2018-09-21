@@ -2,7 +2,7 @@
   "name": "romellogood.github.io",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html --out-dir docs && cpy CNAME docs",
+    "build": "del docs && parcel build index.html --out-dir docs && cpy CNAME docs",
     "dev": "parcel index.html --port 3000",
     "format": "prettier --write 'src/**/*.js'"
   },
@@ -19,6 +19,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "cpy-cli": "^2.0.0",
+    "del-cli": "^1.1.0",
     "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.50.1",
