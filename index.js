@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {createGlobalStyle} from 'styled-components';
+import {createGlobalStyle, css} from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`${css`
   body {
     .color {
-      transition: color 0.5s ease;
+      transition: color 0.25s ease;
 
       ${p => p.color && `color: ${p.color};`};
     }
   }
-`;
+`}`;
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +24,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setInterval(this.getColor, 1000);
+    this.getColor();
+    setInterval(this.getColor, 500);
   }
 
   /**
