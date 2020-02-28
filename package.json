@@ -22,29 +22,29 @@
     "react-dom": "preact/compat"
   },
   "dependencies": {
-    "preact": "^10.0.0",
-    "styled-components": "^4.4.0"
+    "preact": "^10.3.2",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "babel-eslint": "^10.0.3",
-    "babel-plugin-styled-components": "^1.10.6",
+    "@babel/core": "^7.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "cpy-cli": "^2.0.0",
+    "cpy-cli": "^3.1.0",
     "del-cli": "^3.0.0",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
-    "husky": "^3.0.8",
-    "lint-staged": "^9.4.1",
-    "parcel-bundler": "^1.12.3",
-    "prettier": "^1.18.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   }
 }
