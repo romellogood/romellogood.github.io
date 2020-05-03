@@ -1,5 +1,5 @@
-# romellogood.github.io
+# romellogoodman.com
 
 Romello Goodman Portfolio Website
 
-Powered by [parcel](https://parceljs.org/)
+Powered by [next.js](https://github.com/zeit/next.js)
