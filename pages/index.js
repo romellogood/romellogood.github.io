@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
 import styled, {createGlobalStyle, css} from 'styled-components';
 
-import {Main} from '../components/styles';
+import theme from 'utils/theme';
+
+export const Main = styled.main`
+  max-width: 800px;
+  margin: auto;
+  padding: 0px ${theme.space[2]}px;
+  margin-top: ${theme.space[4]}px;
+`;
 
 const Div = styled.div`
   * {
@@ -168,7 +175,7 @@ const HomePage = (props) => {
       <Div>
         <h1 className="color">hi people!</h1>
         <h3>
-          my name is <span class="color">Romello Goodman</span>.
+          my name is <span className="color">Romello Goodman</span>.
         </h3>
         <a
           href="https://github.com/romellogoodman"

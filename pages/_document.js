@@ -45,7 +45,6 @@ export default class NextDocument extends Document {
             content="The Personal Website of Romello Goodman."
           />
           <meta name="keywords" content="Romello Goodman" />
-          <title>Romello Goodman</title>
           <link rel="icon" type="image/png" href="/favicon.png" />
           <link
             href="https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap"
