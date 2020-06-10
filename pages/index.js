@@ -186,15 +186,6 @@ const HomePage = (props) => {
           <h3>github</h3>
         </a>
         <div />
-        <a
-          href="https://mello.today"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Go to Mello Today."
-        >
-          <h3>mello today</h3>
-        </a>
-        <div />
         <h3 className="color">around the web</h3>
         <a
           href="https://increment.com/software-architecture/a-monorepo-renaissance"
