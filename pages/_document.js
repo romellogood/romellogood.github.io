@@ -2,6 +2,8 @@
 import Document, {Head, Main, NextScript} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
 
+import {isDev} from 'utils';
+
 export default class NextDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -53,7 +55,7 @@ export default class NextDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript />
+          {isDev && <NextScript />}
         </body>
       </html>
     );
