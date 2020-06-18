@@ -24,6 +24,64 @@ export const globalCSS = css`
     word-wrap: break-word;
     font-kerning: normal;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0 0 1.0875rem 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2.9rem;
+    line-height: 1.1;
+    color: hsla(0, 0%, 0%, 0.9);
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.51572rem;
+  }
+
+  h3 {
+    font-size: 1.31951rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.87055rem;
+  }
+
+  h6 {
+    font-size: 0.81225rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`${globalCSS}`;

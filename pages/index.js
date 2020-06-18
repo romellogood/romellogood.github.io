@@ -1,177 +1,89 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled, {createGlobalStyle, css} from 'styled-components';
 
 import theme from 'utils/theme';
 
-export const Main = styled.main`
-  max-width: 800px;
+const Main = styled.main`
+  max-width: 600px;
   margin: auto;
   padding: 0px ${theme.space[2]}px;
   margin-top: ${theme.space[4]}px;
 `;
 
 const Div = styled.div`
-  * {
-    box-sizing: border-box;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0 0 1.0875rem 0;
-    padding: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 2.9rem;
-    line-height: 1.1;
-    color: hsla(0, 0%, 0%, 0.9);
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-  }
-
-  h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.51572rem;
-  }
-
-  h3 {
-    font-size: 1.31951rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  h5 {
-    font-size: 0.87055rem;
-  }
-
-  h6 {
-    font-size: 0.81225rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  a > h3:hover,
-  a:hover {
+  a > h3 {
     text-decoration: underline;
-  }
-
-  a h3 {
-    display: inline-block;
   }
 `;
 
 const GlobalColor = createGlobalStyle`${css`
-  body {
-    .color {
-      transition: color 0.25s ease;
+  :root {
+    animation-duration: 15s;
+    animation-name: rainbow;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 
-      ${(p) => p.color && `color: ${p.color};`};
+    @keyframes rainbow {
+      0% {
+        --color: #f0aa80;
+      }
+      7.5% {
+        --color: #f2def2;
+      }
+      15% {
+        --color: #f08080;
+      }
+      22.5% {
+        --color: #f080b8;
+      }
+      30% {
+        --color: #db80f0;
+      }
+      37.5% {
+        --color: #ac80f0;
+      }
+      45% {
+        --color: #8092f0;
+      }
+      52.5% {
+        --color: #80e5f0;
+      }
+      60% {
+        --color: #80f0b8;
+      }
+      67.5% {
+        --color: #80f085;
+      }
+      75% {
+        --color: #baf080;
+      }
+      82.5% {
+        --color: #e8f080;
+      }
+      90% {
+        --color: #f0d480;
+      }
+      100% {
+        --color: #f0aa80;
+      }
     }
+  }
+
+  .color {
+    color: var(--color) !important;
+    transition: color 0.25s ease;
   }
 `}`;
 
-class Color extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      color: '#000000',
-    };
-
-    this.getColor = this.getColor.bind(this);
-  }
-
-  componentDidMount() {
-    this.getColor();
-    setInterval(this.getColor, 500);
-  }
-
-  /**
-   * Taken from
-   * stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
-   */
-  getColor() {
-    const date = new Date();
-    const h = 360 * (date.getMinutes() / 59);
-    const s = date.getSeconds() / 59;
-    const v = 0.75;
-    let r, g, b, i, f, p, q, t;
-
-    i = Math.floor(h * 6);
-    f = h * 6 - i;
-    p = v * (1 - s);
-    q = v * (1 - f * s);
-    t = v * (1 - (1 - f) * s);
-    switch (i % 6) {
-      case 0:
-        r = v;
-        g = t;
-        b = p;
-        break;
-      case 1:
-        r = q;
-        g = v;
-        b = p;
-        break;
-      case 2:
-        r = p;
-        g = v;
-        b = t;
-        break;
-      case 3:
-        r = p;
-        g = q;
-        b = v;
-        break;
-      case 4:
-        r = t;
-        g = p;
-        b = v;
-        break;
-      case 5:
-        r = v;
-        g = p;
-        b = q;
-        break;
-      default:
-        break;
-    }
-
-    const red = Math.round(r * 255);
-    const green = Math.round(g * 255);
-    const blue = Math.round(b * 255);
-
-    this.setState({color: `rgb(${red},${green},${blue})`});
-  }
-
-  render() {
-    return <GlobalColor color={this.state.color} />;
-  }
-}
+const hrefOutside = {
+  target: '_blank',
+  rel: 'noopener noreferrer',
+};
 
 const HomePage = (props) => {
   return (
     <Main>
-      <Color />
+      <GlobalColor />
       <Div>
         <h1 className="color">hi people!</h1>
         <h3>
@@ -179,30 +91,51 @@ const HomePage = (props) => {
         </h3>
         <a
           href="https://github.com/romellogoodman"
-          target="_blank"
-          rel="noopener noreferrer"
           title="Go to github."
+          {...hrefOutside}
         >
           <h3>github</h3>
         </a>
         <div />
+        <a
+          href="https://mello.today"
+          title="Go to mello today."
+          {...hrefOutside}
+        >
+          <h3 className="color">mello today</h3>
+        </a>
+        <ul>
+          <li>
+            <p>tk</p>
+          </li>
+        </ul>
+        <h3 className="color">p5</h3>
+        <ul>
+          <li>
+            <p>tk</p>
+          </li>
+        </ul>
         <h3 className="color">around the web</h3>
-        <a
-          href="https://increment.com/software-architecture/a-monorepo-renaissance"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Go to Increment article"
-        >
-          <p>A monorepo renaissance</p>
-        </a>
-        <a
-          href="https://open.nytimes.com/what-if-we-used-images-to-navigate-new-york-times-content-5a6d87ab3688"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Go to The Times Open article"
-        >
-          <p>What If We Used Images to Navigate New York Times Content?</p>
-        </a>
+        <ul>
+          <li>
+            <a
+              href="https://increment.com/software-architecture/a-monorepo-renaissance"
+              title="Go to Increment article"
+              {...hrefOutside}
+            >
+              <p>A monorepo renaissance</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://open.nytimes.com/what-if-we-used-images-to-navigate-new-york-times-content-5a6d87ab3688"
+              title="Go to The Times Open article"
+              {...hrefOutside}
+            >
+              <p>What If We Used Images to Navigate New York Times Content?</p>
+            </a>
+          </li>
+        </ul>
       </Div>
     </Main>
   );
