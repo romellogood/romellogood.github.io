@@ -104,11 +104,11 @@ const HomePage = (props) => {
         >
           <h3 className="color">mello today</h3>
         </a>
-        <ul>
+        {/* <ul>
           <li>
             <p>tk</p>
           </li>
-        </ul>
+        </ul> */}
         <a
           href="https://github.com/romellogoodman/p5-sketches"
           title="Go to my p5.js sketches."
@@ -116,11 +116,11 @@ const HomePage = (props) => {
         >
           <h3 className="color">p5</h3>
         </a>
-        <ul>
+        {/* <ul>
           <li>
             <p>tk</p>
           </li>
-        </ul>
+        </ul> */}
         <h3 className="color">around the web</h3>
         <ul>
           <li>
