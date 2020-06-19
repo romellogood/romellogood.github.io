@@ -109,7 +109,13 @@ const HomePage = (props) => {
             <p>tk</p>
           </li>
         </ul>
-        <h3 className="color">p5</h3>
+        <a
+          href="https://github.com/romellogoodman/p5-sketches"
+          title="Go to my p5.js sketches."
+          {...hrefOutside}
+        >
+          <h3 className="color">p5</h3>
+        </a>
         <ul>
           <li>
             <p>tk</p>
