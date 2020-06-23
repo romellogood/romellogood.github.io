@@ -97,13 +97,6 @@ const HomePage = (props) => {
           <h3>github</h3>
         </a>
         <div />
-        <a
-          href="https://github.com/romellogoodman/p5-sketches"
-          title="Go to my p5.js sketches."
-          {...hrefOutside}
-        >
-          <h3 className="color">p5</h3>
-        </a>
         <h3 className="color">around the web</h3>
         <ul>
           <li>
