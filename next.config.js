@@ -2,7 +2,6 @@ module.exports = {
   target: 'serverless',
   experimental: {
     modern: true,
-    polyfillsOptimization: true,
   },
   webpack(config, {dev, isServer}) {
     /**
@@ -31,18 +30,6 @@ module.exports = {
     // Install webpack aliases:
     const aliases = config.resolve.alias || (config.resolve.alias = {});
     aliases.react = aliases['react-dom'] = 'preact/compat';
-
-    // inject Preact DevTools
-    if (dev && !isServer) {
-      const entry = config.entry;
-      config.entry = () =>
-        entry().then((entries) => {
-          entries['main.js'] = ['preact/debug'].concat(
-            entries['main.js'] || []
-          );
-          return entries;
-        });
-    }
 
     return config;
   },

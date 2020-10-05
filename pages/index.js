@@ -8,9 +8,7 @@ const Main = styled.main`
   margin: auto;
   padding: 0px ${theme.space[2]}px;
   margin-top: ${theme.space[4]}px;
-`;
 
-const Div = styled.div`
   a > h3 {
     text-decoration: underline;
   }
@@ -82,13 +80,16 @@ const hrefOutside = {
 
 const HomePage = (props) => {
   return (
-    <Main>
+    <>
       <GlobalColor />
-      <Div>
+      <Main>
         <h1 className="color">hi people!</h1>
         <h3>
           my name is <span className="color">Romello Goodman</span>.
         </h3>
+        <a href="https://garnet.website" title="Go to garnet." {...hrefOutside}>
+          <h3>garnet.website</h3>
+        </a>
         <a
           href="https://github.com/romellogoodman"
           title="Go to github."
@@ -118,8 +119,8 @@ const HomePage = (props) => {
             </a>
           </li>
         </ul>
-      </Div>
-    </Main>
+      </Main>
+    </>
   );
 };
 
