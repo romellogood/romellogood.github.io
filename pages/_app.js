@@ -74,8 +74,15 @@ export const globalCSS = css`
     font-size: 0.81225rem;
   }
 
+  body {
+    background: black;
+  }
+
+  * {
+    color: white !important;
+  }
+
   a {
-    color: black;
     text-decoration: none;
 
     &:hover {
