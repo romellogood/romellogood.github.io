@@ -102,6 +102,15 @@ const HomePage = (props) => {
         <ul>
           <li>
             <a
+              href="https://increment.com/remote/code-is-sourdough"
+              title="Go to Increment article"
+              {...hrefOutside}
+            >
+              <p>Code is sourdough</p>
+            </a>
+          </li>
+          <li>
+            <a
               href="https://increment.com/software-architecture/a-monorepo-renaissance"
               title="Go to Increment article"
               {...hrefOutside}
