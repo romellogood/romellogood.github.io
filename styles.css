@@ -1,0 +1,163 @@
+/* App */
+
+* {
+  vertical-align: baseline;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  word-wrap: break-word;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 1.0875rem 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2.9rem;
+  line-height: 1.1;
+  color: hsla(0, 0%, 0%, 0.9);
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.51572rem;
+}
+
+h3 {
+  font-size: 1.31951rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.87055rem;
+}
+
+h6 {
+  font-size: 0.81225rem;
+}
+
+body {
+  background: black;
+}
+
+* {
+  color: white !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Page */
+
+main {
+  max-width: 600px;
+  margin: auto;
+  padding: 0px 8px;
+  margin-top: 32px;
+}
+
+main a > h3 {
+  text-decoration: underline;
+}
+
+:root {
+  animation-duration: 15s;
+  animation-name: rainbow;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  @keyframes rainbow {
+    0% {
+      --color: #f0aa80;
+    }
+    7.5% {
+      --color: #f2def2;
+    }
+    15% {
+      --color: #f08080;
+    }
+    22.5% {
+      --color: #f080b8;
+    }
+    30% {
+      --color: #db80f0;
+    }
+    37.5% {
+      --color: #ac80f0;
+    }
+    45% {
+      --color: #8092f0;
+    }
+    52.5% {
+      --color: #80e5f0;
+    }
+    60% {
+      --color: #80f0b8;
+    }
+    67.5% {
+      --color: #80f085;
+    }
+    75% {
+      --color: #baf080;
+    }
+    82.5% {
+      --color: #e8f080;
+    }
+    90% {
+      --color: #f0d480;
+    }
+    100% {
+      --color: #f0aa80;
+    }
+  }
+}
+
+.color {
+  color: var(--color) !important;
+  transition: color 0.25s ease;
+}
+
+/* Error */
+
+#error {
+  padding: 32px 0px;
+  text-align: center;
+}

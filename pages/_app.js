@@ -1,97 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import {createGlobalStyle, css} from 'styled-components';
-
-import theme from 'utils/theme';
-
-export const globalCSS = css`
-  * {
-    vertical-align: baseline;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: inherit;
-    font-style: inherit;
-    font-size: 100%;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Public Sans', sans-serif;
-    font-size: ${theme.fontSizes[2]}px;
-    font-weight: ${theme.fontWeights.normal};
-    line-height: 1.25;
-    word-wrap: break-word;
-    font-kerning: normal;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0 0 1.0875rem 0;
-    padding: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 2.9rem;
-    line-height: 1.1;
-    color: hsla(0, 0%, 0%, 0.9);
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-  }
-
-  h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.51572rem;
-  }
-
-  h3 {
-    font-size: 1.31951rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  h5 {
-    font-size: 0.87055rem;
-  }
-
-  h6 {
-    font-size: 0.81225rem;
-  }
-
-  body {
-    background: black;
-  }
-
-  * {
-    color: white !important;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const GlobalStyle = createGlobalStyle`${globalCSS}`;
+import 'styles.css';
 
 const NextApp = (props) => {
   const {Component, pageProps = {}} = props;
@@ -113,7 +22,6 @@ const NextApp = (props) => {
           rel="stylesheet"
         />
       </Head>
-      <GlobalStyle />
       <Component {...pageProps} />
     </>
   );
