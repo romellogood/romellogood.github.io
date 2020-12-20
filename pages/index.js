@@ -16,6 +16,13 @@ const Page = () => {
         <h3>garnet.website</h3>
       </a>
       <a
+        href="https://observablehq.com/@romellogoodman/home"
+        title="Go to Observable."
+        {...hrefOutside}
+      >
+        <h3>creative coding blog</h3>
+      </a>
+      <a
         href="https://github.com/romellogoodman"
         title="Go to github."
         {...hrefOutside}
