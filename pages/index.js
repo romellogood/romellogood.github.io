@@ -8,29 +8,43 @@ const hrefOutside = {
 const Page = () => {
   return (
     <main>
-      <h1 className="color">hi people!</h1>
+      <h1>hi!</h1>
       <h3>
-        my name is <span className="color">Romello Goodman</span>.
+        my name is Romello (<span className="color"> mello </span>) Goodman.
       </h3>
-      <a href="https://garnet.website" title="Go to garnet." {...hrefOutside}>
-        <h3>garnet.website</h3>
-      </a>
       <a
         href="https://observablehq.com/@romellogoodman/home"
         title="Go to Observable."
         {...hrefOutside}
       >
-        <h3>creative coding blog</h3>
+        <h3>blog</h3>
       </a>
-      <a
-        href="https://github.com/romellogoodman"
-        title="Go to github."
-        {...hrefOutside}
-      >
-        <h3>github</h3>
+      <a href="https://garnet.website" title="Go to garnet." {...hrefOutside}>
+        <h3>garnet.website</h3>
       </a>
       <div />
-      <h3 className="color">around the web</h3>
+      <h3>around the web</h3>
+      <ul>
+        <li>
+          <a
+            href="https://twitter.com/mellogood"
+            title="Go to twitter."
+            {...hrefOutside}
+          >
+            <p>twitter</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/romellogoodman"
+            title="Go to github."
+            {...hrefOutside}
+          >
+            <p>github</p>
+          </a>
+        </li>
+      </ul>
+      <h3>things i've written</h3>
       <ul>
         <li>
           <a

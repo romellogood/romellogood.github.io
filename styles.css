@@ -69,10 +69,6 @@ h6 {
   font-size: 0.81225rem;
 }
 
-body {
-  background: black;
-}
-
 * {
   color: white !important;
 }
@@ -81,73 +77,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Page */
-
-main {
-  max-width: 600px;
-  margin: auto;
-  padding: 0px 8px;
-  margin-top: 32px;
-}
-
-main a > h3 {
-  text-decoration: underline;
-}
-
-:root {
+body {
+  background: #1b1b1b;
   animation-duration: 15s;
   animation-name: rainbow;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-
-  @keyframes rainbow {
-    0% {
-      --color: #f0aa80;
-    }
-    7.5% {
-      --color: #f2def2;
-    }
-    15% {
-      --color: #f08080;
-    }
-    22.5% {
-      --color: #f080b8;
-    }
-    30% {
-      --color: #db80f0;
-    }
-    37.5% {
-      --color: #ac80f0;
-    }
-    45% {
-      --color: #8092f0;
-    }
-    52.5% {
-      --color: #80e5f0;
-    }
-    60% {
-      --color: #80f0b8;
-    }
-    67.5% {
-      --color: #80f085;
-    }
-    75% {
-      --color: #baf080;
-    }
-    82.5% {
-      --color: #e8f080;
-    }
-    90% {
-      --color: #f0d480;
-    }
-    100% {
-      --color: #f0aa80;
-    }
-  }
 }
 
 .color {
@@ -155,9 +90,79 @@ main a > h3 {
   transition: color 0.25s ease;
 }
 
-/* Error */
+@keyframes rainbow {
+  0% {
+    --color: #f0aa80;
+  }
+  7.5% {
+    --color: #f2def2;
+  }
+  15% {
+    --color: #f08080;
+  }
+  22.5% {
+    --color: #f080b8;
+  }
+  30% {
+    --color: #db80f0;
+  }
+  37.5% {
+    --color: #ac80f0;
+  }
+  45% {
+    --color: #8092f0;
+  }
+  52.5% {
+    --color: #80e5f0;
+  }
+  60% {
+    --color: #80f0b8;
+  }
+  67.5% {
+    --color: #80f085;
+  }
+  75% {
+    --color: #baf080;
+  }
+  82.5% {
+    --color: #e8f080;
+  }
+  90% {
+    --color: #f0d480;
+  }
+  100% {
+    --color: #f0aa80;
+  }
+}
 
-#error {
-  padding: 32px 0px;
-  text-align: center;
+/* Page */
+
+main {
+  max-width: 600px;
+  margin: 32px auto 16px;
+  padding: 0px 8px;
+}
+
+main a > h3 {
+  text-decoration: underline;
+}
+
+a:hover,
+a p:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ul p,
+ul a {
+  display: inline-block;
+}
+
+ul li:last-of-type p {
+  margin-bottom: 0px;
 }

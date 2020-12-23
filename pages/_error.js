@@ -13,10 +13,11 @@ export const PageError = (props) => {
     statusCodes[statusCode] || message || 'An unexpected error has occurred';
 
   return (
-    <main id="error">
-      <p>
-        {errorText}. <a href="/">Click here to go home.</a>
-      </p>
+    <main>
+      <h3 className="color">{errorText}.</h3>
+      <a href="/">
+        <p>Go to homepage.</p>
+      </a>
     </main>
   );
 };
