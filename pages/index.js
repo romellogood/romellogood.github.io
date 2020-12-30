@@ -19,6 +19,13 @@ const Page = () => {
       >
         <h3>blog</h3>
       </a>
+      <a
+        href="https://www.patreon.com/romellogoodman"
+        title="Go to Patreon."
+        {...hrefOutside}
+      >
+        <h3>support the blog</h3>
+      </a>
       <a href="https://garnet.website" title="Go to garnet." {...hrefOutside}>
         <h3>garnet.website</h3>
       </a>
@@ -32,6 +39,15 @@ const Page = () => {
             {...hrefOutside}
           >
             <p>twitter</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/mellogood.codes"
+            title="Go to instagram."
+            {...hrefOutside}
+          >
+            <p>insta</p>
           </a>
         </li>
         <li>
