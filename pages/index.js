@@ -19,23 +19,19 @@ const Page = () => {
       >
         <h3>blog</h3>
       </a>
-      <a
+      {/* <a
         href="https://www.patreon.com/romellogoodman"
         title="Go to Patreon."
         {...hrefOutside}
       >
         <h3>support the blog</h3>
-      </a>
-      <a href="https://garnet.website" title="Go to garnet." {...hrefOutside}>
-        <h3>garnet.website</h3>
-      </a>
-      <div />
+      </a> */}
       <h3>around the web</h3>
       <ul>
         <li>
           <a
             href="https://twitter.com/mellogood"
-            title="Go to twitter."
+            title="Go to Twitter."
             {...hrefOutside}
           >
             <p>twitter</p>
@@ -44,7 +40,7 @@ const Page = () => {
         <li>
           <a
             href="https://www.instagram.com/mellogood.codes"
-            title="Go to instagram."
+            title="Go to Instagram."
             {...hrefOutside}
           >
             <p>insta</p>
@@ -52,11 +48,32 @@ const Page = () => {
         </li>
         <li>
           <a
+            href="https://www.pinterest.com/romellogoodman/romellogoodmancomblog/"
+            title="Go to Pinterest."
+            {...hrefOutside}
+          >
+            <p>pinterest</p>
+          </a>
+        </li>
+        <li>
+          <a
             href="https://github.com/romellogoodman"
-            title="Go to github."
+            title="Go to Github."
             {...hrefOutside}
           >
             <p>github</p>
+          </a>
+        </li>
+      </ul>
+      <h3>projects</h3>
+      <ul>
+        <li>
+          <a
+            href="https://garnet.website"
+            title="Go to Garnet."
+            {...hrefOutside}
+          >
+            <p>garnet.website</p>
           </a>
         </li>
       </ul>
