@@ -112,3 +112,7 @@ const Page = () => {
 };
 
 export default Page;
+
+export const config = {
+  unstable_runtimeJS: false,
+};

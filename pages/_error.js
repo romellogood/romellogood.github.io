@@ -7,7 +7,7 @@ const statusCodes = {
   500: 'Internal Server Error',
 };
 
-export const PageError = (props) => {
+const PageError = (props) => {
   const {message, statusCode} = props;
   const errorText =
     statusCodes[statusCode] || message || 'An unexpected error has occurred';
@@ -28,7 +28,6 @@ PageError.propTypes = {
 };
 
 PageError.getInitialProps = ({err, req, res}) => {
-  // eslint-disable-next-line no-nested-ternary
   const statusCode = res ? res.statusCode : err ? err.statusCode : null;
   const url = req && req.url ? req.url : '';
 
@@ -38,3 +37,7 @@ PageError.getInitialProps = ({err, req, res}) => {
 };
 
 export default PageError;
+
+export const config = {
+  unstable_runtimeJS: false,
+};
