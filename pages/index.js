@@ -12,20 +12,19 @@ const Page = () => {
       <h3>
         my name is Romello (<span className="color"> mello </span>) Goodman.
       </h3>
+      <p>
+        I am a creative technologist primarily working with web technologies. By
+        day, I work as a software engineer at The New York Times. By night, I
+        use a number of different tools to explore the intersection of
+        creativity and code.
+      </p>
       <a
         href="https://observablehq.com/@romellogoodman/home"
         title="Go to Observable."
         {...hrefOutside}
       >
-        <h3>blog</h3>
+        <h3>coding blog</h3>
       </a>
-      {/* <a
-        href="https://www.patreon.com/romellogoodman"
-        title="Go to Patreon."
-        {...hrefOutside}
-      >
-        <h3>support the blog</h3>
-      </a> */}
       <h3>around the web</h3>
       <ul>
         <li>
@@ -74,6 +73,15 @@ const Page = () => {
             {...hrefOutside}
           >
             <p>garnet.website</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://goodgraphics.xyz/"
+            title="Go to Good Graphics."
+            {...hrefOutside}
+          >
+            <p>good graphics</p>
           </a>
         </li>
       </ul>
