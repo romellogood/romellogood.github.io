@@ -47,15 +47,6 @@ const Page = () => {
         </li>
         <li>
           <a
-            href="https://www.pinterest.com/romellogoodman/romellogoodmancomblog/"
-            title="Go to Pinterest."
-            {...hrefOutside}
-          >
-            <p>pinterest</p>
-          </a>
-        </li>
-        <li>
-          <a
             href="https://github.com/romellogoodman"
             title="Go to Github."
             {...hrefOutside}
