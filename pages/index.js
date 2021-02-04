@@ -38,7 +38,7 @@ const Page = () => {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/mellogood.codes"
+            href="https://www.instagram.com/mello.goodgraphics"
             title="Go to Instagram."
             {...hrefOutside}
           >
