@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/blog",
-      "destination": "https://observablehq.com/@romellogoodman/home"
+      "destination": "https://observablehq.com/@romellogoodman?tab=profile"
     }
   ]
 }

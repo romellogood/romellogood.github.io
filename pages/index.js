@@ -22,7 +22,7 @@ const Page = () => {
       <ul>
         <li>
           <a
-            href="https://observablehq.com/@romellogoodman/home"
+            href="https://observablehq.com/@romellogoodman?tab=profile"
             title="Go to Observable."
             {...hrefOutside}
           >
