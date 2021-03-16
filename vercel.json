@@ -4,6 +4,9 @@
     {
       "source": "/blog",
       "destination": "https://observablehq.com/@romellogoodman?tab=profile"
+    },{
+      "source": "/graphic-function",
+      "destination": "https://observablehq.com/d/3cba6ef171cfdb3b"
     }
   ]
 }

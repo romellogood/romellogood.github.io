@@ -91,6 +91,15 @@ const Page = () => {
       <ul>
         <li>
           <a
+            href="https://observablehq.com/d/3cba6ef171cfdb3b"
+            title="Go to Observable Notebook"
+            {...hrefOutside}
+          >
+            <p>Graphic = fn(state)</p>
+          </a>
+        </li>
+        <li>
+          <a
             href="https://increment.com/remote/code-is-sourdough"
             title="Go to Increment article"
             {...hrefOutside}
