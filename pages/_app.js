@@ -1,6 +1,6 @@
 import * as Fathom from 'fathom-client';
 import Head from 'next/head';
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'styles.css';
 
 // Taken from - https://vercel.com/guides/deploying-nextjs-using-fathom-analytics-with-vercel
