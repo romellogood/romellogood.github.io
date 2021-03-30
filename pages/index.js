@@ -91,7 +91,7 @@ const Page = () => {
       <ul>
         <li>
           <a
-            href="https://observablehq.com/@romellogoodman/graphic-function-state"
+            href="https://docs.google.com/presentation/d/1bpnRUbXtXVqTJB1k3Y0afpA7v6EATZndRGf_Ja9ggCg/edit#slide=id.p"
             title="Go to Observable Notebook"
             {...hrefOutside}
           >
