@@ -121,8 +121,8 @@ const Page = () => {
       <ul>
         <li>
           <a
-            href="https://twitter.com/ReactNorway/status/1392887518471671809"
-            title="Go to announcement tweet."
+            href="https://www.youtube.com/watch?v=qrXe7dan-o8"
+            title="Go to the Youtube video."
             {...hrefOutside}
           >
             <p>
