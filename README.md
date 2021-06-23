@@ -2,4 +2,4 @@
 
 Romello Goodman Portfolio Website
 
-Powered by [next.js](https://github.com/zeit/next.js)
+HTML + CSS served by [serve](https://github.com/vercel/serve)
