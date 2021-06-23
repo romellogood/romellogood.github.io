@@ -1,4 +1,4 @@
-/* App */
+/* App Reset */
 
 * {
   vertical-align: baseline;
@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
