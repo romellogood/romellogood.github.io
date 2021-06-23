@@ -1,4 +1,4 @@
-/* App Reset */
+/* Reset */
 
 * {
   vertical-align: baseline;
@@ -69,12 +69,10 @@ h6 {
   font-size: 0.81225rem;
 }
 
+/* Styles */
+
 * {
   color: white !important;
-}
-
-a {
-  text-decoration: none;
 }
 
 body {
@@ -135,34 +133,13 @@ body {
   }
 }
 
-/* Page */
-
 main {
   max-width: 600px;
-  margin: 32px auto 16px;
+  margin: 60px auto 16px;
   padding: 0px 8px;
 }
 
-main a > h3 {
-  text-decoration: underline;
-}
-
-a:hover,
-a p:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: square;
-  list-style-position: inside;
-  padding-left: 0;
-}
-
-ul p,
-ul a {
+li {
   display: inline-block;
-}
-
-ul li:last-of-type p {
-  margin-bottom: 0px;
+  margin-right: 8px;
 }
