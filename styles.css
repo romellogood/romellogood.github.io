@@ -143,3 +143,9 @@ li {
   display: inline-block;
   margin-right: 8px;
 }
+
+.notch {
+  width: 30px;
+  height: 5px;
+  background: white;
+}
